@@ -1,49 +1,13 @@
-<!-- Create a form for users to request tea/coffee. When a user submits an order, it should be stored in the Firestore database, including details like the type of beverage, quantity, and the user's ID. -->
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Order Brews</title>
   </head>
   <body>
-    <h1>Order Brews</h1>
-    <form>
-      <label for="beverage">Beverage:</label>
-      <!-- <input type="text" id="beverage" name="beverage"> -->
-      <!-- beverage can be only coffee or tea. so maybe using select is better practice -->
-      <select id="beverage" name="beverage">
-        <option value="coffee">Coffee</option>
-        <option value="tea">Tea</option>
-      </select>
-      <label for="quantity">Quantity:</label>
-      <input type="number" id="quantity" name="quantity" />
-      <button type="submit">Submit</button>
-    </form>
-    <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
-
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-      const firebaseConfig = {
-        apiKey: "AIzaSyCEtyRMrcih_r4wXq3zV7FuPCV_QTMc8Lo",
-        authDomain: "orderbrews1.firebaseapp.com",
-        projectId: "orderbrews1",
-        storageBucket: "orderbrews1.appspot.com",
-        messagingSenderId: "323622374415",
-        appId: "1:323622374415:web:49bc6bc80f6060041ae77a",
-        measurementId: "G-HGSVTQG7KQ",
-      };
-
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-    </script>
-    <script src="./script.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
